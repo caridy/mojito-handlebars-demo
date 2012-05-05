@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+    <div id="{{mojit_view_id}}">
+        Handlebars: {{status}}
+    </div>
+
+    <script src="http://yui.yahooapis.com/3.5.0/build/yui/yui-min.js"></script>
+    <script>
+    YUI().use("handlebars-base", "node", function (Y) {
+        var template = Y.Handlebars.template({{{precompiled}}});
+        Y.one("body").append(template({foo: "bar"}));
+    });
+    </script>
+
+</body>
+</html>
